@@ -83,10 +83,14 @@ WSGI_APPLICATION = 'rawletube.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        conn_max_age=600,
-        conn_health_checks=True,
-    ),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "postgres",
+        'USER': 'postgres',
+        'PASSWORD': 'rawlenightlong14',
+        'HOST': 'db.oeklikwkdsemabwfwlgf.supabase.co',
+        'PORT':'5432'
+    }
 }
 
 
